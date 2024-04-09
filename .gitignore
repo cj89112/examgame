@@ -51,6 +51,9 @@ web_modules/
 # Optional npm cache directory
 .npm
 
+# Prevent .env file from being committed
+.env
+
 # Optional eslint cache
 .eslintcache
 

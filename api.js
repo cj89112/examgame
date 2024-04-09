@@ -5,9 +5,13 @@ const mongodb = require('mongodb');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+require('dotenv').config();
+
 // MongoDB connection URI
 // const mongoURI = 'mongodb://localhost:27017';
-const mongoURI = 'mongodb://cpride829:<password>@snowcatcluster:27017/game-chars-database';
+// const mongoURI = 'mongodb://cpride829:<password>@snowcatcluster:27017/game-chars-database';
+
+const mongoURI = process.env.MONGODB_URI;
 const dbName = 'game-chars-database';
 const collectionName = 'game-chars-collection';
 
