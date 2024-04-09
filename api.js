@@ -9,7 +9,6 @@ require('dotenv').config();
 
 // MongoDB connection URI
 // const mongoURI = 'mongodb://localhost:27017';
-// const mongoURI = 'mongodb://cpride829:<password>@snowcatcluster:27017/game-chars-database';
 
 const mongoURI = process.env.MONGODB_URI;
 const dbName = 'game-chars-database';
@@ -126,7 +125,6 @@ app.delete('/characters/:id', async (req, res) => {
   }
 });
 
-// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
